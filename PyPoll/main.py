@@ -29,15 +29,23 @@ with open(election_csv, newline="") as csvfile:
 
     for keys, values in results.items():
         percent = round(((int(values)/total)*100), 4)
-        print (f"{keys}: {values} total votes | {percent}%")
+        toprint= print(f"{keys}: {values} total votes | {percent}%")
+
+
     winner = [(value, key) for key, value in results.items()]
-    print("The winner is: ",max(winner)[1])
+    #winnername = (print(f"The winner is: {max(winner)[1]}"))
+    winnername = max(winner)[1]
+    print(f"Winner: {winnername}")
 
-
+ 
 f= open("Election_Results.txt", 'w+')
 f.write(f"ELECTION RESULTS\n")
 f.write("---------------------------\n")
 f.write(f"Candidates: {candidates}\n")
 f.write(f"Total votes: {total}\n")
-#f.write(f"{toprint_keys}\n")
-#f.write(f"The winner is: {winnername}")
+for keys, values in results.items():
+        percent = round(((int(values)/total)*100), 4)
+        f.write(f"{keys}: {values} total votes | {percent}% \n")
+#winner = [(value, key) for key, value in results.items()]
+#f.write(fwinnername= print("The winner is: ",max(winner)[1])
+f.write(f"Winner: {winnername}")
