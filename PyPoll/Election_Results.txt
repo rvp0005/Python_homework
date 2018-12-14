@@ -1,0 +1,4 @@
+ELECTION RESULTS
+---------------------------
+Candidates: ['Khan', 'Correy', 'Li', "O'Tooley"]
+Total votes: 3521001
