@@ -25,14 +25,13 @@ with open(budget_csv, newline="") as csvfile:
         
    
     profitdiff.pop(0)
-    print(profitdiff)
+    #print(profitdiff)
 
-    totalprofitdiff= (sum(profitdiff) / (nummonth - 1))
-    print(totalprofitdiff)
+    totalprofitdiff= round((sum(profitdiff) / (nummonth - 1)),2)
+    #print(totalprofitdiff)
 
     maxincrease= max(profitdiff)
     maxdecrease= min(profitdiff)
-
 
     print("Financial Analysis")
     print("--------------------------------------------------------")
@@ -43,3 +42,11 @@ with open(budget_csv, newline="") as csvfile:
     print(f"The greatest loss in profits was ${maxdecrease}")
 
 
+f= open("Banking_results.txt", 'w+')
+f.write("Financial Analysis\n")
+f.write("--------------------------------------------------------\n")
+f.write(f"Total number of months is {nummonth}\n")
+f.write(f"The net profit and loss was ${Total_profit}\n")
+f.write(f"The average change in 'Profit/Losses' between months was ${totalprofitdiff}\n")
+f.write(f"The greatest increase in profits was ${maxincrease}\n")
+f.write(f"The greatest loss in profits was ${maxdecrease}\n")

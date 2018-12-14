@@ -1,0 +1,7 @@
+Financial Analysis
+--------------------------------------------------------
+Total number of months is 86
+The net profit and loss was $38382578
+The average change in 'Profit/Losses' between months was $-2315.12
+The greatest increase in profits was $1926159
+The greatest loss in profits was $-2196167
